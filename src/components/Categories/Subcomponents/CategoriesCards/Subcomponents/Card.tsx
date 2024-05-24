@@ -28,7 +28,7 @@ const Card = () => {
           <img
             src={cardItem.src}
             alt={cardItem.title}
-            className="rounded-xl transform transition-transform duration-300 hover:scale-110"
+            className="rounded-xl transform transition-transform duration-300 lg:hover:scale-110"
           />
           <p className="font-semibold text-PrimaryColor-950">
             {cardItem.title}

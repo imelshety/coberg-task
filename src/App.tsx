@@ -1,4 +1,5 @@
 import "./App.css";
+import Blog from "./components/Blog/Blog";
 import Categories from "./components/Categories/Categories";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
@@ -24,9 +25,14 @@ function App() {
       </Interiors>
       <Categories>
         <Categories.Title />
-        <Categories.Card/>
-        <Categories.Caption/>
+        <Categories.Card />
+        <Categories.Caption />
       </Categories>
+      <Blog>
+        <Blog.Title />
+        <Blog.Slider />
+        <Blog.Action />
+      </Blog>
     </main>
   );
 }
