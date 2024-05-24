@@ -11,7 +11,7 @@ type HeroComponent = React.FC<HeroProps> & {
 };
 const Hero: HeroComponent = ({ children }) => {
   return (
-    <div className="mt-16 lg:mt-[15rem] py-16 lg:py-10 w-full lg:flex justify-between relative overflow-x-hidden">
+    <div className="mt-16 overflow-y-hidden lg:mt-[15rem] py-16 lg:py-10 w-full lg:flex justify-between relative overflow-x-hidden">
       {children}
     </div>
   );
