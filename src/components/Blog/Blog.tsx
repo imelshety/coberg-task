@@ -13,7 +13,7 @@ type BlogComponent = React.FC<BlogProps> & {
 };
 const Blog: BlogComponent = ({ children }) => {
   return (
-    <section className="ps-20 flex flex-col gap-12 my-20 pb-8">
+    <section className="ps-20 flex flex-col gap-12 my-20 pb-20">
       {children}
     </section>
   );

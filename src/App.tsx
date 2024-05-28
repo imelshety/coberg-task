@@ -1,6 +1,7 @@
 import "./App.css";
 import Blog from "./components/Blog/Blog";
 import Categories from "./components/Categories/Categories";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Interiors from "./components/Interiors/Interiors";
@@ -33,6 +34,12 @@ function App() {
         <Blog.Slider />
         <Blog.Action />
       </Blog>
+      <Footer>
+        <Footer.Info />
+        <Footer.Category/>
+        <Footer.Contact/>
+        <Footer.Phone/>
+      </Footer>
     </main>
   );
 }

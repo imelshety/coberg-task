@@ -1,5 +1,5 @@
 
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import HeaderLogo from "./Subcomponents/HeaderLogo";
 import HeaderTitle from "./Subcomponents/HeaderTitle";
 import HeaderNav from "./Subcomponents/HeaderNav";
@@ -16,11 +16,25 @@ type HeaderComponent = React.FC<HeaderProps> & {
 };
 const Header: HeaderComponent = ({ children }) => {
   const [active, setActive] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <header
-        className={`hidden lg:block fixed left-0 right-0 top-0 z-50 ps-8 bg-secondaryColor-50 mb-8 ${
+        className={`hidden lg:${
+          scrolled ? "flex" : "block"
+        } fixed left-0 right-0 top-0 z-50 ps-8 bg-secondaryColor-50 mb-8 ${
           active ? "hidden" : ""
         }`}
       >
