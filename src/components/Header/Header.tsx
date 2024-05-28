@@ -20,7 +20,8 @@ const Header: HeaderComponent = ({ children }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
+      const halfScreenHeight = window.innerHeight / 2;
+      setScrolled(window.scrollY > halfScreenHeight);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -29,6 +30,7 @@ const Header: HeaderComponent = ({ children }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
   return (
     <>
       <header
