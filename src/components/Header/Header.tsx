@@ -33,12 +33,10 @@ const Header: HeaderComponent = ({ children }) => {
   
   return (
     <>
-      <header
-        className={`hidden lg:${
-          scrolled ? "flex" : "block"
-        } fixed left-0 right-0 top-0 z-50 ps-8 bg-secondaryColor-50 mb-8 ${
+       <header
+        className={`hidden lg:block fixed left-0 right-0 top-0 z-50 ps-8 bg-secondaryColor-50 mb-8 ${
           active ? "hidden" : ""
-        }`}
+        } ${scrolled ? "lg:flex" : "lg:block"}`}
       >
         {children}
       </header>
